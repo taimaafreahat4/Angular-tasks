@@ -1,0 +1,103 @@
+
+<div class="container">
+
+  <!-- Store Header -->
+  <header class="store-header">
+    <h1>{{ storename }}</h1>
+    <p>{{ storedescription }}</p>
+  </header>
+
+  <div class="store-content">
+
+    <!-- Store Status -->
+    <div class="status">
+      <h3>We Are {{ storestatus }}</h3>
+    </div>
+
+    <!-- Featured Product -->
+    <section class="featured">
+
+      <h3>Featured Product</h3>
+
+      <div class="featured-details">
+        <h4>{{ featuredProduct.name }}</h4>
+
+        <p>{{ featuredProduct.description }}</p>
+
+        <div class="prices">
+
+          <span class="old-price">
+            ${{ featuredProduct.price }}
+          </span>
+
+          <span class="new-price">
+            ${{ finalprice }}
+          </span>
+
+          <span class="discount">
+            {{ discountPercentage }}% Discount
+          </span>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Our Products -->
+    <section class="products">
+
+      <h3>Our Products</h3>
+
+      <table class="products-table">
+
+        <tr>
+          <th>{{ productname[1] }}</th>
+          <th>{{ productname[2] }}</th>
+          <th>{{ productname[3] }}</th>
+          <th>{{ productname[4] }}</th>
+        </tr>
+
+        <tr>
+          <td>${{ productPrices[1] }}</td>
+          <td>${{ productPrices[2] }}</td>
+          <td>${{ productPrices[3] }}</td>
+          <td>${{ productPrices[4] }}</td>
+        </tr>
+
+      </table>
+
+    </section>
+
+    <!-- Store Summary -->
+    <section class="summary">
+
+      <h3>Store Summary</h3>
+
+      <table class="summary-table">
+
+        <tr>
+          <th>{{ totalNumberOfProducts }}</th>
+          <th>${{ mostExpensivePrice }}</th>
+          <th>${{ cheapestPrice }}</th>
+          <th>${{ totalProductsValue }}</th>
+        </tr>
+
+        <tr>
+          <td>Total Products</td>
+          <td>Highest Price</td>
+          <td>Lowest Price</td>
+          <td>Total Products Value</td>
+        </tr>
+
+      </table>
+
+      <p class="summary-note">
+        Illustrative layout – students should implement it
+        using the topics covered.
+      </p>
+
+    </section>
+
+  </div>
+
+</div>
