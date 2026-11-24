@@ -1,0 +1,60 @@
+<h1>product-list works!</h1>
+
+
+<section>
+<div class="products">
+<!--product1:laptop-->
+<div class="product-card">
+<img [src]="products[0].image" alt="laptop" width="200">
+<h3>{{products[0].name}}</h3>
+<p>{{products[0].description}}</p>
+<p>{{products[0].price}}</p>
+<p>{{products[0].available}}</p>
+
+
+<button [disabled]="!products[0].available"
+(click)="buyProduct(products[0].name)">Buy Now</button>
+</div>
+
+
+
+<div class="product-card">
+    <img [src]="products[1].image" alt="smartphone" width="200">
+    <h3>{{products[1].name}}</h3>
+<p>{{products[1].description}}</p>
+<p>{{products[1].price}}</p>
+<p>{{products[1].available}}</p>
+
+<button [disabled]="!products[1].available" (click)="buyProduct(products[1].name)">Buy Now</button>
+</div>
+
+
+
+
+<div class="product-card">
+    <img [src]="products[2].image" alt="headphones" width="200">
+    <h3>{{products[2].name}}</h3>
+<p>{{products[2].description}}</p>
+<p>{{products[2].price}}</p>
+<p>{{products[2].available}}</p>
+
+<button [disabled]="!products[1].available" (click)="buyProduct(products[2].name)">Buy Now</button>
+</div>
+
+
+
+
+
+<div class="product-card">
+    <img [src]="products[3].image" alt="smartwatch" width="200">
+    <h3>{{products[3].name}}</h3>
+<p>{{products[3].description}}</p>
+<p>{{products[3].price}}</p>
+<p>{{products[3].available}}</p>
+
+<button [disabled]="!products[3].available" (click)="buyProduct(products[3].name)">Buy Now</button>
+</div>
+
+
+</div>
+</section>

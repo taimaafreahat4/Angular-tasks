@@ -1,0 +1,30 @@
+
+<p>--------------------------------___________________________________________----------------------</p>
+<p>product-details</p>
+<h1>{{productName}}</h1>
+<h1>{{productDescription}}</h1>
+
+<h1>{{isAvailable}}</h1>
+<h1>{{discountPercentage}}</h1>
+
+<img [src]="productImage" alt="laptop" width="200">
+<h1>{{quantity}}</h1>
+<button (click)="increasequantity()">increase</button>
+<button (click)="decreasquantity()">decrease</button>
+
+
+<h3>{{getTotal()}}</h3>
+<h1>{{productName}}</h1>
+<h1>{{productPrice}}</h1>
+
+
+<label>Product Name</label>
+  <input
+    type="text"
+    [(ngModel)]="productName">
+
+<label>Product price</label>
+  <input
+    type="number"
+    [(ngModel)]="productPrice">
+

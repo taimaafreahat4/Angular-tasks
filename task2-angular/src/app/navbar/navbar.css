@@ -1,0 +1,24 @@
+
+nav {
+  background-color: #24476b;
+  padding: 15px;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: none;
+  padding: 12px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #dbeafe;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+}
