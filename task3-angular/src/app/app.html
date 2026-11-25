@@ -1,0 +1,16 @@
+<h1>ElectroShop</h1>
+
+<app-product-details
+  [ProductNames]="ProductNames()"
+  [description]="descriptions()"
+  [prices]="prices()"
+  [isavailables]="isavailables()"
+  (addToCart)="receiveData($event)">
+</app-product-details>
+
+<app-shopping-cart 
+[name]="cartName"
+[quantity]="cartQuantity"
+[price]="cartPrice">
+</app-shopping-cart>
+
