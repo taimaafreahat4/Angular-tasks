@@ -1,0 +1,36 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.discount-card {
+  background-color: lightyellow;
+}
+
+.available-card {
+  border: 2px solid green;
+}
+
+.unavailable-card {
+  border: 2px solid red;
+}
+
+.premium-card {
+  box-shadow: 0 0 10px orange;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,98 @@
+<h1>ElectroShop</h1>
+
+<h2>Categories</h2>
+
+@if (selectedCategory === 'All Products') {
+  <p>Showing All Products</p>
+}
+@else if (selectedCategory === 'Electronics') {
+  <p>Electronics Category</p>
+}
+@else if (selectedCategory === 'Accessories') {
+  <p>Accessories Category</p>
+}
+
+
+<div class="products">
+
+  @for (product of products(); track product.id) {
+
+    <div class="card"
+
+      [ngClass]="{
+        'discount-card': product.discount > 0,
+        'available-card': product.isAvailable,
+        'unavailable-card': !product.isAvailable,
+        'premium-card': product.price > 500
+      }"
+
+      [ngStyle]="{
+        'opacity': product.isAvailable ? 1 : 0.5
+      }">
+
+      <img [src]="product.image" width="150">
+
+      <h2>{{product.name}}</h2>
+
+      <p>{{product.category}}</p>
+
+      <h2 [ngStyle]="{
+        'color': product.discount > 0 ? 'red' : 'black',
+        'font-size': product.price > 500 ? '30px' : '20px'
+      }">
+        {{product.price}} JD
+      </h2>
+
+      <p>Discount: {{product.discount}}%</p>
+
+      @if (product.isAvailable) {
+        <p>Available</p>
+        <button>Buy Now</button>
+      }
+      @else {
+        <p>Out of Stock</p>
+      }
+
+      @if (product.discount > 0) {
+        <p>Special Offer</p>
+      }
+      @else {
+        <p>No Discount</p>
+      }
+
+      @if (product.price > 500) {
+        <p>Premium Product</p>
+      }
+
+    </div>
+
+  }
+
+</div>
+
+
+<h2>Order Status</h2>
+
+@switch (orderStatus) {
+
+  @case ('Pending') {
+    <p>Your order is waiting for confirmation.</p>
+  }
+
+  @case ('Processing') {
+    <p>Your order is being prepared.</p>
+  }
+
+  @case ('Shipped') {
+    <p>Your order has been shipped.</p>
+  }
+
+  @case ('Delivered') {
+    <p>Your order has been delivered.</p>
+  }
+
+  @default {
+    <p>Unknown Order Status</p>
+  }
+
+}
